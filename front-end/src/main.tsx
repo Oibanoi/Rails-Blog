@@ -15,7 +15,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <ThemeProvider>
       <I18nextProvider i18n={i18n}>
-        <ConfigProvider locale={REGIONS[getCurrentLanguage()].antdLocale} >
+        <ConfigProvider locale={REGIONS[getCurrentLanguage()].antdLocale}>
           <App />
         </ConfigProvider>
       </I18nextProvider>

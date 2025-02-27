@@ -1,4 +1,5 @@
 import react from '@vitejs/plugin-react';
+import path from 'path';
 import { HtmlTagDescriptor, defineConfig } from 'vite';
 import checker from 'vite-plugin-checker';
 import { nodePolyfills } from 'vite-plugin-node-polyfills';
@@ -82,6 +83,11 @@ export default defineConfig({
       scss: {
         additionalData: `@import "./src/styles/variables.scss";`,
       },
+    },
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
     },
   },
 });
