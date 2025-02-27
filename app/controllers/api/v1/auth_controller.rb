@@ -7,6 +7,7 @@ module Api
       # POST /api/v1/login
       def login
         # Expect JSON payload with email and password
+        puts params[:email], params[:password]
         user = User.find_by(email: params[:email])
         if user && user.authenticate(params[:password])
           token = JsonWebToken.encode(user_id: user.id)
